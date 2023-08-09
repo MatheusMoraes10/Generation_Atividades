@@ -1,6 +1,5 @@
 package Exercicios;
 
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
@@ -9,7 +8,7 @@ public class CollectionQueueExercicio01 {
 
 	public static void main(String[] args) {
 		
-		int opcao = 0, tamanhofila = 0;
+		int opcao = 1;
 		String cliente;
 		
 		Scanner leitura = new Scanner(System.in);
@@ -24,11 +23,8 @@ public class CollectionQueueExercicio01 {
 		System.out.println("*********************************");
 
 		Queue<String> fila = new LinkedList<String>();
-		
-		Iterator<String> interacao = fila.iterator();
-		
-		System.out.println("Entre com a opção desejada: ");
-		opcao = leitura.nextInt();
+	
+		//While que repete escolha do menu enquanto é menor que 0
 		
 		while (opcao != 0) {
 			System.out.println("Entre com a opção desejada: ");
@@ -36,36 +32,38 @@ public class CollectionQueueExercicio01 {
 			
 			switch (opcao) {
 				case 1:
+					//Insere um cliente a fila não consegui usar o Interator para imprimir
 					System.out.println("Digite o nome: ");
-					cliente = leitura.nextLine();
+					cliente = leitura.next();
 					fila.add(cliente);
 					System.out.println();
 					System.out.println("Fila: ");
-					tamanhofila = fila.size();
-					while(interacao.hasNext()) {
-						System.out.println(interacao.next());
-					}
+					System.out.println(fila);
 					System.out.println();
 					System.out.println("Cliente Adicionado!");
+					System.out.println();
 				break;
 				case 2:
-					while(interacao.hasNext()) {
-						System.out.println(interacao.next());
-					}
+					System.out.println("Lista de Clientes na Fila: ");
+					System.out.println();
+					System.out.println(fila);
+					System.out.println();
 				break;
 				case 3:
-					if (fila.isEmpty() == true){
+					//Verifica se a fila está vazia e imprime se sim ou "Atende" um da fila como pedido pelo exercicio
+ 					if (fila.isEmpty() == true){
 						System.out.println("A Fila está vazia!");
-					}else {
+						System.out.println();
+					}else{
 						System.out.println(fila.remove());
+						System.out.println();
+						System.out.println("Fila: ");
+						System.out.println();
+						System.out.println(fila);
+						System.out.println();
+						System.out.println("Cliente foi Chamado!");
 					}
-					System.out.println();
-					System.out.println("Fila: ");
-					while(interacao.hasNext()) {
-						System.out.println(interacao.next());
-					}
-					System.out.println();
-					System.out.println("Cliente foi Chamado!");
+					
 				break;
 				
 			}
@@ -73,7 +71,6 @@ public class CollectionQueueExercicio01 {
 		}
 		
 		System.out.println("Programa Finalizado!");
-		
 	}
 
 }
