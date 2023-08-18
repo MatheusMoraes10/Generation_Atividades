@@ -1,6 +1,6 @@
 package conta.model;
 
-public class ContaPoupanca extends Conta{
+public class ContaPoupanca extends Carrinho{
 
 	private int aniversario;
 

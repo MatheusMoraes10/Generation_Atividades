@@ -1,5 +1,7 @@
 package conta;
 
+import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import conta.controller.ContaController;
@@ -17,9 +19,9 @@ public class Menu {
 		
 		Scanner leia = new Scanner(System.in);
 		
-		int opcao, numero, agencia, tipo, aniversario;
+		int opcao, numero, agencia, tipo, aniversario, numeroDestino;
 		String titular;
-		float saldo = 0, limite;
+		float saldo = 0, limite, valor;
 		
 		System.out.println("\nCriar Contas\n");
 		
@@ -58,6 +60,16 @@ public class Menu {
 			System.out.println("Entre com a opção desejada:                          ");
 			System.out.println("                                                     ");
 			opcao = leia.nextInt();
+			
+			/*
+			try {
+				opcao = leia.nextInt();
+			}catch(InputMismatchException e){
+				System.out.println("\nDigite valores inteiros!");
+				leia.nextLine();
+				opcao=0;
+			}
+			*/
 			
 			if(opcao == 9) {
 				System.out.println("\nBanco do Brazil com Z - O seu futuro começa aqui!");
@@ -165,15 +177,47 @@ public class Menu {
 			case 6:
 				System.out.println(Cores.TEXT_WHITE + "\n Sacar");
 				
+				System.out.println("Digite o Numero da conta: ");
+				numero = leia.nextInt();
+				
+				do {
+					System.out.println("Digite o Valor do Saque (R$): ");
+					valor = leia.nextFloat();
+				}while(valor <=0);
+				
+				contas.sacar(numero, valor);
+				
 				keyPress();
 				break;
              case 7:
 				System.out.println(Cores.TEXT_WHITE + "\n Depositar");
 				
+				System.out.println("Digite o Numero da conta: ");
+				numero = leia.nextInt();
+				
+				do {
+				System.out.println("Digite o valor do Depósito (R$): ");
+				valor = leia.nextFloat();
+				}while(valor <=0);
+				
+				contas.depositar(numero, valor);
+				
 				keyPress();
 				break;
              case 8:
 				System.out.println(Cores.TEXT_WHITE + "\n Transferir");
+				
+				System.out.println("Digite o Numero da Conta de Origem: ");
+				numero = leia.nextInt();
+				System.out.println("Digite o Numero da Conta de Destino: ");
+				numeroDestino = leia.nextInt();
+				
+				do {
+					System.out.println("Digite o Valor da Tranferência (R$): ");
+					valor = leia.nextFloat();
+				}while(valor <=0);
+				
+				contas.transferir(numero, numeroDestino, valor);
 				
 				keyPress();
 				break;
@@ -184,9 +228,17 @@ public class Menu {
         }
 	}
 
-	private static void keyPress() {
-		// TODO Auto-generated method stub
-		
-	}
+public static void keyPress() {
 
+		try {
+
+			System.out.println(Cores.TEXT_RESET + "\n\nPressione Enter para Continuar...");
+			System.in.read();
+
+		} catch (IOException e) {
+
+			System.out.println("Você pressionou uma tecla diferente de enter!");
+
+		}
+	}
 }
