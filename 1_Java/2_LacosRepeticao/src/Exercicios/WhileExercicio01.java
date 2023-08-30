@@ -13,7 +13,7 @@ public class WhileExercicio01 {
 		while(cont >= 0) {
 			System.out.print("\n Digite uma idade: ");
 			cont = leitura.nextInt();
-			if(cont < 21) {
+			if(cont < 21 && cont >= 0) {
 				menores21++;
 			}else if(cont > 50) {
 				maiores50++;
