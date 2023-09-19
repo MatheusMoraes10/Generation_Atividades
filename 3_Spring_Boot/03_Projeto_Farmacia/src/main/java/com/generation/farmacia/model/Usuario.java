@@ -1,4 +1,4 @@
-package com.generation.blogpessoal.model;
+package com.generation.farmacia.model;
 
 import java.util.List;
 
@@ -19,7 +19,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 @Entity
-@Table(name = "tb_usuarios")
+@Table(name = "tb_cliente_farmacia")
 public class Usuario {
 
 	@Id
@@ -42,8 +42,8 @@ public class Usuario {
 	private String foto;
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "usuario", cascade = CascadeType.REMOVE)
-	@JsonIgnoreProperties("usuario")
-	private List<Postagem> postagem;
+	@JsonIgnoreProperties("cliente")
+	private List<Produto> produto;
 	
 	public Usuario(Long id, String nome, String usuario, String senha, String foto) {
 		this.id = id;
@@ -97,12 +97,13 @@ public class Usuario {
 		this.foto = foto;
 	}
 
-	public List<Postagem> getPostagem() {
-		return this.postagem;
+	public List<Produto> getProduto() {
+		return this.produto;
 	}
 
-	public void setPostagem(List<Postagem> postagem) {
-		this.postagem = postagem;
+	public void setProduto(List<Produto> produto) {
+		this.produto = produto;
 	}
 
 }
+
