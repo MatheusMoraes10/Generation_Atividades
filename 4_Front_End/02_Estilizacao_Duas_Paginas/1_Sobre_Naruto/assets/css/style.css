@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+body {
+    background-color: rgb(184, 89, 0);
+    padding: 0% 5%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    height: 150px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: lightgray;
+    font-weight: bolder;
+}
+
+.tlt {
+    display: grid;
+    text-align: center;
+    align-content: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+    background-image: url(../img/NarutoXSasuke1.PNG);
+    background-size:  100% 100%;
+    background-position: center;
+    height: 200px;
+}
+
+main {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    background-image: url(../img/NarutoESasuke.png);
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+main div {
+    margin: 30px 15px;
+}
+
+main img, iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.dv1 {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    column-gap: 2%;
+    padding: 5% 2%;
+    background-color: lightgray;
+}
+
+.dv2 {
+    display: grid;
+    column-gap: 2%;
+    padding: 5% 2%;
+    grid-template-columns: 50% 50%;
+    background-color: lightgray;
+}
+
+.dv2 div {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.c {
+    color: rgb(155, 93, 0);
+}
+
+.dv3 {
+    display: grid;
+    column-gap: 2%;
+    row-gap: 2%;
+    padding: 0% 4%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    background-color: lightgray;
+}
+
+.dv3 div {
+    margin-top: 0px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    align-items: top;
+}
+
+.dv3 div img {
+    height: 100px;
+    width: 100%;
+}
+
+.dv3 a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: rgb(124, 61, 1);
+    font-weight: bolder;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 0px 10px;
+    color: black;
+}
