@@ -1,0 +1,52 @@
+.txt-center {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt-justify {
+    text-align: justify;
+}
+
+#menu li {
+    display: inline;
+    padding: 20px;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+}
+
+#menu li a:hover {
+    color: #808080;
+}
+
+.pddg-30 {
+    padding: 30px;
+}
+
+.bdr-50 {
+    border-radius: 50%;
+}
+
+.enquadrar {
+    height: 150px;
+    width: 150px;
+}
+
+.tm-social {
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+}
+
+.mrg-left {
+    margin-left: 30px;
+}

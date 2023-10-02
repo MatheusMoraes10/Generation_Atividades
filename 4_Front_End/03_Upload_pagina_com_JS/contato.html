@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="assets/CSS/Style.css">
+</head>
+<body>
+    <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
+
+    <h1 class="txt-center">Entre em contato comigo</h1>
+
+    <div class="container">    
+        <div>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" onkeyup="validaNome()"><br>
+                <div id="txtNome"></div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" onkeyup="validaEmail()"><br>
+                <div id="txtEmail"></div>
+                <label for="assunto">Assunto:</label><br>
+                <textarea name="" id="assunto" cols="30" rows="10" onkeyup="validaAssunto()"></textarea>
+                <div id="txtAssunto"></div><br>
+                <button onclick="enviar()">Enviar</button>
+            </form>
+        </div>
+
+        <div class="mrg-left">
+            <h2>Endereço</h2>
+            <p>Fianarantsoa 301</p>
+            <p>Madagascar</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42013.25956853504!2d47.05951713548919!3d-21.44957298716727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21e7b928b794fb1d%3A0x841b75c1cd55916d!2sHotel%3F%20Trivago!5e0!3m2!1spt-BR!2sbr!4v1695845064457!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapa" onmousemove="mapaZoom()" onmouseout="mapaNormal()"></iframe>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <div class="container">
+            <a href="https://www.linkedin.com/in/matheus-s-a-moraes/" target="blank"><img src="assets/img/facebook_black_logo_icon_147136.png" alt="Linkedin" class="tm-social"></a>
+            <a href="https://www.linkedin.com/in/matheus-s-a-moraes/" target="blank"><img src="assets/img/linkedin_black_logo_icon_147114.png" alt="Linkedin" class="tm-social"></a>
+            <a href="https://github.com/MatheusMoraes10" target="blank"><img src="assets/img/github-logo_icon-icons.com_73546.png" alt="Github" class="tm-social"></a>
+            <a href="https://www.linkedin.com/in/matheus-s-a-moraes/" target="blank"><img src="assets/img/instagram_black_logo_icon_147122.png" alt="Linkedin" class="tm-social"></a>
+        </div>
+           <p class="txt-center"> Todos os direitos reservados: Matheus moraes &copy;</p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
